@@ -41,3 +41,5 @@ In the project directory Dependency
 ### `yarn add styled-components`
 
 ### `yarn add @types/styled-components`
+
+### `yarn add styled-reset`
