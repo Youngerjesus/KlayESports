@@ -65,6 +65,9 @@ const Header:React.FunctionComponent = () =>  {
                 </NavLogo>
                 <NavMenu>
                     <NavButton>
+                        Home
+                    </NavButton>
+                    <NavButton>
                         League Of Legend
                     </NavButton>
                     <NavButton>
@@ -72,6 +75,11 @@ const Header:React.FunctionComponent = () =>  {
                     </NavButton>
                     <NavButton>
                         Battleground
+                    </NavButton>
+                </NavMenu>
+                <NavMenu>
+                    <NavButton>
+                        Login
                     </NavButton>
                 </NavMenu>
             </NavInner>

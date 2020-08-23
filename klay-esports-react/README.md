@@ -43,3 +43,7 @@ In the project directory Dependency
 ### `yarn add @types/styled-components`
 
 ### `yarn add styled-reset`
+
+### `yarn add axios`
+
+### `yarn add react-router-dom`
