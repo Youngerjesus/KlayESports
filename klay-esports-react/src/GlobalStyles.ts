@@ -23,7 +23,6 @@ const GlobalStyles = createGlobalStyle`
       font-family: SFUIText, Apple SD Gothic Neo, sans-serif;
       font-size: 14px;
       line-height: 18px;
-      color: $black;
     
       *, *::before, *::after {
         box-sizing: border-box;
@@ -48,8 +47,9 @@ const GlobalStyles = createGlobalStyle`
         padding: unset;
         background-color: unset;
         border: unset;
+        outline: aliceblue;
       }
-    
+      
       ul {
         margin: 0;
         padding: 0;

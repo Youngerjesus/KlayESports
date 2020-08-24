@@ -1,8 +1,10 @@
 import React from 'react';
 import Header from "./Components/Header";
 import GlobalStyles from "./GlobalStyles";
+// import Home from "./routes/Home";
+import { BrowserRouter, Route, Switch} from "react-router-dom";
 import Home from "./routes/Home";
-import { BrowserRouter, Route} from "react-router-dom";
+import Profile from "./routes/Profile";
 
 function App() {
   return (
@@ -10,10 +12,14 @@ function App() {
         <GlobalStyles />
         <div className="App">
             <Header />
-            <Route path="/" exact component={Home} />
-            {/*<Route path="/about" component={} />*/}
-            {/*<Route path="/movie/:id" component={} />*/}
-            {/*<Redirect path="*" to="/" />*/}
+            <Switch>
+                <Route path="/profile/:nickname" component={Profile} />
+                <Route path-="/" exact component={Home} />
+                {/*<Route path="/" exact component={Home} />*/}
+                {/*<Route path="/about" component={} />*/}
+                {/*<Route path="/movie/:id" component={} />*/}
+                {/*<Redirect path="*" to="/" />*/}
+            </Switch>
         </div>
     </BrowserRouter>
   );
