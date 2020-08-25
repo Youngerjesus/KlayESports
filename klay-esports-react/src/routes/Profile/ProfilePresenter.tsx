@@ -1,7 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import Polygon from 'react-polygon';
-import ProfilePerformanceGraph from "../../Components/ProfilePerformanceGraph";
+import ProfilePerformanceGraph from "./ProfilePerformanceGraph";
+import ProfileOverview from "./ProfileOverview";
+import ProfilePerformanceOverview from "./ProfilePerformanceOverview";
+import ProfileGraphOverview from "./ProfileGraphOverview";
+import ProfileHeaderOverview from "./ProfileHeaderOverview";
 const ProfileWrapper = styled.div`
     display: flex;
     flex-direction: column;
@@ -17,12 +20,6 @@ const ProfileHeader = styled.div`
     -webkit-box-pack: justify;
     justify-content: space-between;
     padding-bottom: 20px;
-`
-
-const ProfileBase = styled.div`
-    display: flex;
-    -webkit-box-pack: start;
-    justify-content: flex-start;
 `
 
 const Contact = styled.div`
@@ -50,38 +47,6 @@ const ContactButton = styled.button`
 const ProfileImage = styled.img`
 `
 
-const ProfileNameContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    justify-content: center;
-    padding: 0px 1.5rem;
-`;
-
-const ProfileName = styled.h3`
-    font-size: 2.4rem;
-    font-weight: 500;
-    text-transform: capitalize;
-    color: rgb(170, 170, 170));
-    padding: 0.5rem 0px; 
-`
-const ProfileNameBox = styled.div`
-    display: flex;
-    flex-direction: row;
-`;
-
-const ProfileLeagueName = styled.span`
-    font-size: 1.2rem;
-    text-transform: capitalize;
-    color: rgb(170, 170, 170));
-    padding: 0.5rem 0px; 
-`
-const ProfileTeamName = styled.span`
-    font-size: 1rem;
-    text-transform: capitalize;
-    color: rgb(170, 170, 170));
-    padding: 0.5rem 0px; 
-`
 const ProfileBody = styled.div`
     display: grid;
     grid-template-areas:
@@ -140,62 +105,13 @@ const ProfileGraphHeader = styled.div`
 const ProfileGraph = styled.div`
     padding: 1.2rem;
 `
-const ProfileGraphHeaderLineBox = styled.div`
-    display: flex;
-    -webkit-box-pack: justify;
-    justify-content: flex-start;
-    font-size: 1.2rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    padding: 0.9rem 1.2rem 0.8rem;
-`
-const ProfileGraphHeaderLineImage = styled.img`
-    width: 2rem;
-    height: 2rem;
-    display: block;
-    margin-right: 1.2rem;
-`
-
-const ProfileGraphHeaderLine = styled.p`
-`
-
-const ProfileGraphWrapper = styled.div`
-    padding: 1.2rem;
-    height:100%; 
-    display:flex; 
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%;
-    text-align: center;
-    position: relative;
-    fill-opacity: 0.1;
-    stroke: rgb(204, 173, 112); 
-    stroke-width: 1.8;
-    filter: drop-shadow(rgba(0, 0, 0, 0.4) 0px 0px 13px);
-`
-const PolygonBox = styled.div`
-    transform: translate(60, 60) !important;
-    width:100%;
-    height:100%;
-    background-image:url("../../assets/polygon.PNG");
-`
-
-
 
 const ProfilePresenter:React.FunctionComponent = () =>  {
     return (
         <ProfileWrapper>
             <ProfileHeaderContainer>
                 <ProfileHeader>
-                    <ProfileBase>
-                        <ProfileNameContainer>
-                            <ProfileName> DRX Deft </ProfileName>
-                            <ProfileNameBox>
-                                <ProfileLeagueName> LoL Champions Korea · &nbsp; </ProfileLeagueName>
-                                <ProfileTeamName> Dragon X </ProfileTeamName>
-                            </ProfileNameBox>
-                        </ProfileNameContainer>
-                    </ProfileBase>
+                    <ProfileHeaderOverview />
                     <Contact>
                         <ContactButton> Contact </ContactButton>
                     </Contact>
@@ -203,29 +119,17 @@ const ProfilePresenter:React.FunctionComponent = () =>  {
             </ProfileHeaderContainer>
             <ProfileBody>
                 <ProfileGraphBox>
-                    <ProfileGraphHeaderLineBox>
-                        <ProfileGraphHeaderLineImage src={require("../../assets/position/Position_Challenger-Bot.png")}/>
-                        <ProfileGraphHeaderLine> Bottom </ProfileGraphHeaderLine>
-                    </ProfileGraphHeaderLineBox>
-                    <ProfileGraphWrapper>
-                        <PolygonBox>
-                            <ProfilePerformanceGraph />
-                        </PolygonBox>
-                    </ProfileGraphWrapper>
+                    <ProfileGraphOverview />
                 </ProfileGraphBox>
-                <ProfileKeywordBox></ProfileKeywordBox>
-                <ProfilePerformanceBox></ProfilePerformanceBox>
+                <ProfileKeywordBox>
+                    <ProfileOverview />
+                </ProfileKeywordBox>
+                <ProfilePerformanceBox>
+                    <ProfilePerformanceOverview />
+                </ProfilePerformanceBox>
             </ProfileBody>
         </ProfileWrapper>
     )
 };
-
-// <svg height="300" width="300">
-//     <polygon points="150,0,267.2747223702,56.47652972119,296.23918682727,183.37814009345,215.08256086763,285.14533018536,84.917439132366,285.14533018536,3.7608131727264,183.37814009345,32.725277629796,56.47652972119" style={{fill: "rgb(204, 173, 112)",stroke: "rgb(204, 173, 112)"}} />
-// </svg>
-// {/*<Polygon size="300" n="7"></Polygon>*/}
-// <svg height="300" width="300">
-//     <polygon points="220,10 300,210 170,250 123,234" style={{fill:"lime",stroke:'black'}} />
-// </svg>
 
 export default ProfilePresenter;
