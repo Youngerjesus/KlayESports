@@ -3,8 +3,8 @@ import Header from "./Components/Header";
 import GlobalStyles from "./GlobalStyles";
 // import Home from "./routes/Home";
 import { BrowserRouter, Route, Switch} from "react-router-dom";
-import Home from "./routes/Home";
-import Profile from "./routes/Profile";
+import Profile from "./routes/Profile/index";
+import Home from "./routes/Home/index";
 
 function App() {
   return (

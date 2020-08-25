@@ -43,6 +43,11 @@ const GlobalStyles = createGlobalStyle`
         font-family: unset;
       }
       
+      textarea:focus, input:focus, input[type]:focus, .uneditable-input:focus {
+        border-color: rgba(229, 103, 23, 0.8);
+        outline: 0 none;
+      }
+
       button {
         padding: unset;
         background-color: unset;

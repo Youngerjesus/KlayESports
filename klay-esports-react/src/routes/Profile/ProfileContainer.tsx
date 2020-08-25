@@ -3,7 +3,6 @@ import styled from "styled-components";
 import axios from "axios";
 import ProfilePresenter from "./ProfilePresenter";
 interface IState{
-
 }
 
 interface IProps{
@@ -18,8 +17,6 @@ export default class extends React.Component<IProps, IState> {
     }
 
     render() {
-        console.log(this.state);
-        console.log(this.props);
         return (
             <ProfilePresenter />
         )
