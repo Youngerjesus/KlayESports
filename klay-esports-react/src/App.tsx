@@ -5,7 +5,7 @@ import GlobalStyles from "./GlobalStyles";
 import { BrowserRouter, Route, Switch} from "react-router-dom";
 import Profile from "./routes/Profile/index";
 import Home from "./routes/Home/index";
-
+import Search from "./routes/Search/index";
 function App() {
   return (
     <BrowserRouter>
@@ -13,6 +13,7 @@ function App() {
         <div className="App">
             <Header />
             <Switch>
+                <Route path="/search/:keyword" component={Search} />
                 <Route path="/profile/:nickname" component={Profile} />
                 <Route path-="/" exact component={Home} />
                 {/*<Route path="/" exact component={Home} />*/}

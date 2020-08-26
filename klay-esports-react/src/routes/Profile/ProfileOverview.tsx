@@ -88,6 +88,9 @@ const ProfileTagBox = styled.div`
     gap: 0px;
 `
 const ProfileTag = styled.div`
+    box-shadow: 0 0 1px 2.5px rgba(254, 76, 64, 0.4);
+    background: rgba(254, 76, 64, 0.8);
+    border-radius:10px;
     text-align: center;
     white-space: nowrap;
     grid-area: Tag / Tag / Tag / Tag;
