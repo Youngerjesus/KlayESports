@@ -47,3 +47,5 @@ In the project directory Dependency
 ### `yarn add axios`
 
 ### `yarn add react-router-dom`
+
+### `yarn add @types/react-router-dom`
